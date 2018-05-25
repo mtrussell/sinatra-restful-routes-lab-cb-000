@@ -13,10 +13,15 @@
   <p>Ingredients: <%= @recipe.ingredients %></p>
 
 
+  <a href="/recipes/<%= @recipe.id %>/edit">Edit</a>
+
   <form action="/recipes/<%= @recipe.id %>/delete" method="post">
     <input id="hidden" type="hidden" name="_method" value="delete">
     <input type="submit" value="delete">
   </form>
+
+  <h2>View All Recipes</h2>
+  <a href="/recipes">Click Here</a>
 
 </body>
 </html>
